@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css">
+  <script>
+    var today = new Date();
+    var hour = today.getHours();
+    
+    if (hour < 12) {
+      <title>Good Morning Abhiram...</title>;
+    } else if (hour < 18) {
+      <title>Good Afternoon Abhiram...</title>;
+    } else {
+      <title>Good Evening Abhiram...</title>;
+    }
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="wrapper1" class="card">
+    <div>
+    <script>  
+        var welcome;  
+        var date = new Date();  
+        var hour = date.getHours();  
+        var minute = date.getMinutes();  
+        var second = date.getSeconds();  
+        if (minute < 10) {  
+          minute = "0" + minute;  
+        }  
+        if (second < 10) {  
+          second = "0" + second;  
+        }  
+        if (hour < 12) {  
+          welcome = "Good Morning";  
+        } else if (hour < 17) {  
+          welcome = "Good Afternoon";  
+        } else {  
+          welcome = "Good Evening";  
+        }  
+        document.write("<h1>" +welcome + " Abhiram...");  
+    </script> 
+    </div>
+    <div id="tim" class="card">
+			<div class="time" id="time"></div>
+      <canvas id="canvas" width="250" height="250"></canvas>
+    </div>
+  </div>
+  <div id="swe">
+    <div id="wrapper2" class="card">
+      <div id="swe1">
+        <div id="wrapper3">
+          <div id="img">
+            <img src="assets/google_logo.png" width="60px">
+          </div>
+          <form action="https://www.google.com/search" method="get" target="_blank">
+            <input placeholder="  Search Google..." type="text" name="q">
+            <button type="submit"><img src="assets/search (1).png" width="40px" border-radius: 0px 0 0 0px; /></button>
+          </form>
+          <div id="imgyt">
+            <img src="assets/yt_logo.png" width="60px">
+          </div>
+            <form action="http://www.youtube.com/results" method="get" target="_blank">
+            <input placeholder="  Search YouTube..." name="search_query" type="text" maxlength="128" />
+            </select>
+            <button type="submit"><img src="assets/search (1).png" width="40px" border-radius: 5px 0 0 5px; /></button>
+            </form> 
+            
+        </div>
+        <div id="wrapper3" class="card" name="bookmarks">
+          <form action="https://vtopcc.vit.ac.in/vtop/login" method="get" target="_blank">
+            <button id="book" type="submit"><img src="assets/vit.png" width="60px" border-radius: 0px 0 0 0px; /></button>
+          </form>
+          <form action="https://mail.google.com/mail/u/2/?hl=en#inbox" method="get" target="_blank">
+            <button id="book" type="submit"><img src="assets/gmail_prof.png" width="60px" border-radius: 0px 0 0 0px; /></button>
+          </form>
+          <form action="https://mail.google.com/mail/u/0/#inbox" method="get" target="_blank">
+            <button id="book" type="submit"><img src="assets/Gmail_Logo.png" width="60px" border-radius: 0px 0 0 0px; /></button>
+          </form>
+          <form action="https://www.netflix.com/browse" method="get" target="_blank">
+            <button id="book" type="submit"><img src="assets/netflif.png" width="60px" border-radius: 0px 0 0 0px; /></button>
+          </form>
+          <form action="https://open.spotify.com" method="get" target="_blank">
+            <button id="book" type="submit"><img src="assets/spotify.png" width="60px" border-radius: 0px 0 0 0px; /></button>
+          </form>
+        </div>
+      </div>    
+      
+    </div>
+  </div>
+	<script>
+		// Get the current time
+		var time = new Date();
+
+		// Update the time display every second
+		setInterval(function() {
+			time = new Date();
+			document.getElementById("time").innerHTML = time.toLocaleTimeString();
+		}, 1000);
+
+    // Get the current time
+    var date = new Date();
+      var hours = date.getHours();
+      var minutes = date.getMinutes();
+      var seconds = date.getSeconds();
+  
+      // Calculate the rotation angles for the hands
+      var hourAngle = (hours * 360 / 12) + (minutes / 2);
+      var minuteAngle = (minutes * 360 / 60) + (seconds / 6);
+      var secondAngle = seconds * 360 / 60;
+      // Set the rotation angles for the hands
+      document.querySelector('.hour-hand').style.transform = 'rotate(' + hourAngle + 'deg)';
+      document.querySelector('.minute-hand').style.transform = 'rotate(' + minuteAngle + 'deg)';
+      document.querySelector('.second-hand').style.transform = 'rotate(' + secondAngle + 'deg)';
+
+      // Update the clock every second
+      setInterval(function() {
+        // Get the current time
+        date = new Date();
+        hours = date.getHours();
+        minutes = date.getMinutes();
+        seconds = date.getSeconds();
+
+        // Calculate the rotation angles for the hands
+        hourAngle = (hours * 360 / 12) + (minutes / 2);
+        minuteAngle = (minutes * 360 / 60) + (seconds / 6);
+        secondAngle = seconds * 360 / 60;
+
+        // Set the rotation angles for the hands
+        document.querySelector('.hour-hand').style.transform = 'rotate(' + hourAngle + 'deg)';
+        document.querySelector('.minute-hand').style.transform = 'rotate(' + minuteAngle + 'deg)';
+        document.querySelector('.second-hand').style.transform = 'rotate(' + secondAngle + 'deg)';
+        }, 1000);
+	</script>
+</body>
+</html>
